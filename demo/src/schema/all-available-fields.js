@@ -12,7 +12,8 @@ import {
 export default {
     onSubmit: save.bind(this),
     initialValues: {
-        radio: 1
+        radio: 1,
+        tags:["a","b"]
     },
     schema: {
         id: "all-available-fields",
@@ -177,6 +178,13 @@ export default {
                 formGroupClass: "form-group mb-4",
                 validation: [['array'], ['of', [['string']]]]
             },
+            reactTag: {
+                name: "tags",
+                label: "Tags",
+                type: "field",
+                delimiter: ',',
+                renderer: "react-tag",
+            },
             textarea: {
                 name: "description",
                 label: "Description",
@@ -194,11 +202,11 @@ export default {
                     value: 'checkbox-1',
                     label: 'Checkbox 1'
                 }],
-                validation: [
-                    ['bool'],
-                    ['test', 'singleCheckbox.0', 'You have to select this value', value => value === true],
-                    ['required', 'You have to select this value']
-                ]
+                // validation: [
+                //     ['bool'],
+                //     ['test', 'singleCheckbox.0', 'You have to select this value', value => value === true],
+                //     ['required', 'You have to select this value']
+                // ]
             },
             multiCheckbox: {
                 name: "multiCheckbox",

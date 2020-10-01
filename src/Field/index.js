@@ -11,6 +11,7 @@ import InnerText from './InnerText';
 import InnerHtml from './InnerHtml';
 import CodeEditor from './CodeEditor';
 import ReactSelect from './ReactSelect';
+import ReactTag from "./ReactTag";
 import FileUploader from './FileUploader';
 import Autocomplete from './Autocomplete';
 
@@ -33,5 +34,6 @@ registerField('inner-text', InnerText);
 registerField('inner-html', InnerHtml);
 registerField('code-editor', CodeEditor);
 registerField('react-select', ReactSelect);
+registerField("react-tag", ReactTag);
 registerField('autocomplete', Autocomplete);
 registerField('file-uploader', FileUploader);
